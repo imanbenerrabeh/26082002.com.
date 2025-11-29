@@ -1,80 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Literary Notes / Archive</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My daily notes</title>
   <style>
-    body {
-      font-family: "Times New Roman", Times, serif;
-      font-size: 11pt;
-      color: #000000;
-      background-color: #ffffff;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      line-height: 1.4;
-    }
-
-    .entry {
-      padding: 10px 0;
-    }
-
-    .entry h2 {
-      margin: 0 0 5px 0;
-      font-size: 11pt;
-      font-weight: bold;
-    }
-
-    .entry p {
-      margin: 0;
-      font-size: 11pt;
-    }
-
-    h1 {
-      font-size: 14pt;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;max-width:760px;margin:40px auto;padding:0 16px;line-height:1.45;color:#111}
+    pre,code{font-family:monospace;background:#f6f6f6;padding:2px 6px;border-radius:4px}
+    header{margin-bottom:1.2rem}
+    footer{margin-top:2rem;color:#666;font-size:.9rem}
   </style>
 </head>
 <body>
-  <h1>Literary Notes / Archive</h1>
+  <header>
+    <h1>Daily text-only page</h1>
+    <p>Short subtitle / date</p>
+  </header>
 
-  <div class="entry">
-    <h2>2025-09-08</h2>
-    <p>in the mood for tea character</p>
-  </div>
+  <main>
+    <article>
+      <h2>Today's entry</h2>
+      <p>Write your daily text here. This site is plain HTML — to update, edit <code>index.html</code> on GitHub.</p>
+    </article>
+  </main>
 
-  <div class="entry">
-    <h2>2025-09-09</h2>
-    <p>stockbroker guy character</p>
-  </div>
-
-  <div class="entry">
-    <h2>2025-09-18</h2>
-    <p>
-      public registry<br>
-      beautiful girl hand shaking calluses<br>
-      benny the brazilian stock brocker<br>
-      i like to image the old as young and the young as old<br>
-      child lasagna smell<br>
-      mandatory voting fine brazil for novel story line paper work kafka<br>
-      teenage girl yelling at her boyfriend on the street<br>
-      michelin restaurant daytime<br>
-      boy holding little brothers hand<br>
-      teal green nails<br>
-      max mara quiet luxury<br>
-      an unsettling feeling of placelessness within<br>
-      movinv around<br>
-      stockholm syndrome<br>
-      norrmalmstorg drama ex<br>
-      inas is this your friend / yes<br>
-      big scandinavian man<br>
-      greenbank off the grid town telescope<br>
-      Beautiful girl slight lisp
-    </p>
-  </div>
-
+  <footer>
+    <p>Made with GitHub Pages • <span id="updated"></span></p>
+    <script>document.getElementById('updated').textContent = 'Last edited: ' + new Date().toLocaleString();</script>
+  </footer>
 </body>
 </html>
