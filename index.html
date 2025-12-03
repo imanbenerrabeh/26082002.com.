@@ -5,53 +5,97 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>iman ben errabeh — wip literary portfolio</title>
 <style>
-html,body{height:100%}
-body{
-  margin:0;
-  padding:40px;
+html, body {height:100%}
+body {
+  margin:0; padding:40px;
   font-family:"Times New Roman", Times, serif;
-  font-size:12pt;
-  color:#000;
-  background:#fff;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
+  font-size:12pt; line-height:1.5;
+  color:#000; background:#fff;
 }
-.container{max-width:760px;margin:0 auto;text-align:left}
-header{ text-align:center;margin-top:40px}
-h1{margin:0;font-size:1.6em;font-weight:normal}
-.subtitle{margin-top:8px;font-size:1em}
-main{margin-top:40px;}
-.entry-space{
+.container {max-width:760px; margin:0 auto;}
+header {text-align:center; margin-top:40px}
+h1 {margin:0; font-size:1.6em; font-weight:normal}
+.subtitle {margin-top:8px; font-size:1em}
+main {margin-top:40px}
+
+/* Entry styles */
+.entry {
   margin-top:40px;
-  padding:0;
-  min-height:300px;
   white-space:pre-wrap;
 }
-footer{margin-top:40px;color:#666;font-size:.9em;text-align:center}
-a{color:inherit}
+.tags {
+  margin-top:8px;
+  font-size:0.8em;
+  color:#555;
+}
+.tag {
+  cursor:pointer;
+  margin-right:8px;
+  text-decoration:underline;
+}
+
+/* Footer categories */
+footer {
+  margin-top:60px;
+  color:#888; font-size:0.7em;
+  text-align:center;
+}
+
+/* Hidden when filtered */
+.hidden {display:none}
 </style>
 </head>
 <body>
 <div class="container">
 <header>
-  <h1>iman ben errabeh</h1>
-  <div class="subtitle">wip literary portfolio</div>
+<h1>iman ben errabeh</h1>
+<div class="subtitle">wip literary portfolio</div>
 </header>
 
-<main>
-  <div class="entry-space">A large rabbit street side
+<main id="entries">
+
+<div class="entry" data-tags="poetry">
+A large rabbit street side
 Like a semicolon on paper,
 She - with her ears and her 
 Small steps, reminds me of 
 Me without clothes on me.
 Lanugo and still warm from 
-All the mean things I said.
+All the mean things I said. 
 
-22/11/25</div>
+22/11/25.
+<div class="tags">
+<span class="tag" data-tag="poetry">#poetry</span>
+</div>
+</div>
+
 </main>
 
 </div>
-  <footer>© 2025 Iman Ben Errabeh. All rights reserved.</footer>
+
+<footer>
+#philosophy = essay &nbsp; | &nbsp; 
+#screenplay = sketches &nbsp; | &nbsp; 
+#fiction = long form story &nbsp; | &nbsp; 
+#poetry = short form verse &nbsp; | &nbsp; 
+#files = misc. reference folder
+</footer>
+
+<script>
+const tags = document.querySelectorAll('.tag');
+const entries = document.querySelectorAll('.entry');
+
+tags.forEach(tag => {
+  tag.addEventListener('click', () => {
+    const selected = tag.dataset.tag;
+    entries.forEach(entry => {
+      entry.classList.toggle('hidden',
+        !entry.dataset.tags.includes(selected)
+      );
+    });
+  });
+});
+</script>
+
 </body>
 </html>
