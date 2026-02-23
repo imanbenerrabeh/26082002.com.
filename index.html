@@ -11,8 +11,14 @@ body {
   font-family:"Times New Roman", Times, serif;
   font-size:12pt; line-height:1.5;
   color:#000; background:#fff;
+  display:flex;
+  flex-direction:column;
 }
-.container {max-width:760px; margin:0 auto;}
+.container {
+  max-width:760px;
+  margin:0 auto;
+  flex:1;
+}
 header {text-align:center; margin-top:40px}
 h1 {margin:0; font-size:1.6em; font-weight:normal}
 .subtitle {margin-top:8px; font-size:1em}
@@ -33,12 +39,11 @@ main {margin-top:40px}
   color:#000;
 }
 
-/* Copyright */
+/* Fixed minimal copyright */
 .copyright {
-  margin-top:80px;
   text-align:center;
-  font-size:12pt;
-  color:#000;
+  font-size:11pt;
+  padding:20px 0;
 }
 
 /* Hidden when filtered */
@@ -46,6 +51,7 @@ main {margin-top:40px}
 </style>
 </head>
 <body>
+
 <div class="container">
 <header>
 <h1>iman ben errabeh</h1>
@@ -74,7 +80,6 @@ Big mid-February snowstorm in Stockholm
 and yet beyond reason I know spring is near,
 reading lots of nabokov and lots of neruda
 which is how I know the season is coming.
-
 I need no clocks and no calendars,
 all I need to do is look at my bookshelf
 and there it is my window.
@@ -86,11 +91,10 @@ Stockholm 21/2/26
 </div>
 
 </main>
+</div>
 
 <div class="copyright">
 © 2025 Iman Ben Errabeh. All rights reserved.
-</div>
-
 </div>
 
 <script>
